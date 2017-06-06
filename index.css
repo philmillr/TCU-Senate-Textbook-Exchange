@@ -1,0 +1,21 @@
+.full{
+    
+    font-family: "Quicksand", sans-serif;
+    color: saddlebrown;
+    text-align: center;
+    
+}
+
+*{
+    background-color: rgb(62, 142, 222);
+}
+
+#header{
+    font-size: 400%;
+}
+
+.links{
+    font-size: 250%;
+    word-spacing: 1.5em;
+    line-height: 5em;
+}
