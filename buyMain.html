@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src='sellMain.js'></script>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Khula:300,700" rel="stylesheet">
+        <link href = "sellMain.css" type = "text/css" rel = "stylesheet">
+        
+    
+    
     </head>
     <body>
-        <h4>buyMain.html</h4>
-        <a href="index.html">Home</a><br>
-        <a href="sellMain.html">Sell Page</a>
         
-        <form id='buyForm'>>
-            id:<br>
-            <input id='id' name='id' type='text'><br>
+        <img src = "http://www.bookicious.com/img/bk.jpg" id = backImage>
         
-            <button type='submit' onclick="sendBuyData();">Send</button>
+        <div class = "full">
+            <div class = "header">
+                <div class = "links">
+                    <ul>
+                        <li class = "linkhover"><a href="index.html">Home</a></li> 
+                        <li class = "linkhover"><a href="sellMain.html">Sell</a></li>
+                    </ul>
+                </div>
+                <h1>Buy A Textbook<img src="http://i.imgur.com/hzwlt25.png" id = logo></h1>
+                
+            </div>
+            <br>
+            <div class = "main">
+            <form id='buyForm'>
+                <a href = "https://docs.google.com/spreadsheets/d/1qyDzREjnNzHyhciQTXtxLAuJhwjd096KQux_znc1I8U/edit" id = excelLink target = "_blank">List of Available Textbooks</a><br><br>
+                Textbook ID:<br>
+                <input id = "class" name = "class" type= "type"><br>
             
-        
-        </form>
-
-
+                <button type='submit' onclick="sendSellData();"><span>Submit</span></button>
+              </form>
+            </div>
+        </div>
     </body>
 </html>
+
+<!--https://script.google.com/macros/s/AKfycbxvb88TNK1jhtxjKBAmmAfUioIWr4pbeACqljb07KeNAOjX8C3a/exec -->
+
+
+<!--
+Class
+Textbook title (Req)
+Edition
+Email (Req)
+Phone Number
+Price
+YOUR Venmo (e.g. @John-Smith) -- will be paid automatically if sold [if prefer cash, write CASH]
+-->
