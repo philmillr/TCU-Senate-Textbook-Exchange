@@ -1,17 +1,36 @@
+*{
+   font-family: "Khula", sans-serif;
+    color: whitesmoke;
+    font-weight: 400;
+}
+
 .full{
     
-    font-family: "Quicksand", sans-serif;
-    color: saddlebrown;
+    
     text-align: center;
     
 }
 
-*{
-    background-color: rgb(62, 142, 222);
+html{
+    height: 100%;
+    background:url("https://static.pexels.com/photos/110252/pexels-photo-110252.jpeg") no-repeat  bottom;
+    background-size:cover;
+}
+
+
+a{
+    text-decoration:none;
+    padding: 30px;
+}
+
+a:hover{
+    color:rgb(62, 142, 222);
 }
 
 #header{
-    font-size: 400%;
+    color: rgb(62, 142, 222);
+    font-size: 550%;
+    margin-bottom: 40px;
 }
 
 .links{
@@ -19,3 +38,9 @@
     word-spacing: 1.5em;
     line-height: 5em;
 }
+
+img{
+    margin-top: -75px;
+    height: 250px;
+}
+
