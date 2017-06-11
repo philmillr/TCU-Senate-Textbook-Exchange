@@ -44,7 +44,6 @@ $(document).ready(function(){
         //Log message to console
         console.log("buyMain AJAX worked!");
         console.log(response)
-        console.log(response[1])
         console.log(textStatus);
         console.log(jqXHR);
     });
