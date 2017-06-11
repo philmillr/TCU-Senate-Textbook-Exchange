@@ -1,7 +1,6 @@
 console.log("start of sellMain.js");
 
-function sendSellData()
-{
+$(document).ready(function(){
 console.log("start of function");
 
 
@@ -68,4 +67,4 @@ $("#sellForm").submit(function(event){
     event.preventDefault();
     console.log("sendData")
 });
-}
+});
