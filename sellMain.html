@@ -25,25 +25,29 @@
             <div class = "main">
             <form id='sellForm'>
                 Class:<br>            
-                <input id='class' name='class' type="text"><br>
+                <input id='class' name='class' autocapitalize="characters"
+                       pattern="[A-Z]{2,4}[ ][0-9]{4}" title="department code followed by 4 digit class code (e.g. CHEM 0012)" 
+                       placeholder="e.g. SPN 0022" requried><br>
 
                 Textbook Title:<br>
-                <input id='textbookTitle' name='textbookTitle' type="text"><br>
+                <input id='textbookTitle' name='textbookTitle' type="text" required><br>
 
                 Edition:<br>
                 <input id='edition' name='edition' type="text"><br>
 
                 Email:<br>
-                <input id='email' name='email' type="text"><br>
+                <input id='email' name='email' type="email" required><br>
 
                 Phone Number:<br>
-                <input id='phoneNumber' name='phoneNumber' type="text"><br>
+                <input id='phoneNumber' name='phoneNumber' type="tel"><br>
 
                 Price:<br>
-                <input id='price' name='price' type="text"><br>
+                <input id='price' name='price' type="text" required><br>
 
                 YOUR Venmo (e.g. @John-Smith) -- will be paid automatically if sold [if prefer cash, write CASH]<br>
-                <input id='venmo' name='venmo' type="text"><br>
+                <input id='venmo' name='venmo' pattern="CASH|[@][A-z]{1,20}" 
+                       title="please write CASH or input your venmo with the @ character"
+                       placeholder="e.g. @philmillr" required><br>
             
                 <button type='submit' onclick="sendSellData();"><span>Submit</span></button>
               </form>
