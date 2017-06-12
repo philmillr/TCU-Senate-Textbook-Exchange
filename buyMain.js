@@ -46,6 +46,8 @@ $(document).ready(function(){
         console.log(response)
         console.log(textStatus);
         console.log(jqXHR);
+        displayData(response);
+
     });
 
     //Callback handler that will be called on failure
@@ -64,3 +66,15 @@ $(document).ready(function(){
     console.log("sendData")
     });
 });
+
+
+function displayData(JsonData){
+    var itemInfo = "";
+    for (var part in JsonData){
+        itemInfo = itemInfo + part + ":" + JsonData[part] + ", ";        
+        
+    }
+    
+    window.confirm(itemInfo);
+    
+}
