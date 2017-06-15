@@ -1,14 +1,35 @@
 console.log("start of buyMain.js");
 
+
+
 $(document).ready(function(){
     console.log("Beginning of sendBuyData()")
     
     //Variable to hold request
     var request;
+    
+         var submitButton = document.getElementById("submitButton"); 
+        var confirmButton = document.getElementById("confirmButton");
+        var cancelButton = document.getElementById("cancelButton");
+        var loading = document.getElementById("sk-folding-cube");
+        var loadingPrint = document.getElementById("loading");
+        var output = document.getElementById('confirmInfo'); 
+    
+    $('#confirmInfo').hide();
+    
+    submitButton.onclick = function(){
+        loading.style.visibility = "visible";
+        loadingPrint.style.visibility = "visible";
+        submitButton.style.visibility = "hidden";
+    }
 
     // bind to the submit event in our form
+    
+    
 
     $("#buyForm").submit(function(event){
+        
+       
     
         //Abort any pending request
         if (request) {
@@ -16,6 +37,9 @@ $(document).ready(function(){
             request.abort()
         
         }
+        
+   
+
 
         // setup some local variables
         var $form = $(this);
@@ -46,9 +70,35 @@ $(document).ready(function(){
         console.log(response)
         console.log(textStatus);
         console.log(jqXHR);
+        
         displayData(response);
-
+        output.style.visibility = "visible";
+        confirmButton.style.visibility = "visible";
+        cancelButton.style.visibility = "visible";
+        loading.style.visibility = "hidden";
+        loadingPrint.style.visibility = "hidden";
+        $('#confirmInfo').fadeIn(1000);
+        $('.co').fadeIn(1000);
+        
+        
+        
+        
     });
+        
+    cancelButton.onclick = function(){
+            output.style.visibility = "hidden";
+            $('.co').fadeOut(500);
+            confirmButton.style.visibility = "hidden";
+            cancelButton.style.visibility = "hidden";
+            $('#submitButton').hide();
+            submitButton.style.visibility = "visible";
+            $('#submitButton').fadeIn(1000);
+            loading.style.visibility = "hidden";
+            loadingPrint.style.visibility = "hidden";
+            deleteOldData();
+        
+            
+        }
 
     //Callback handler that will be called on failure
     request.fail(function(jqXHR, textStatus, errorThrown){
@@ -68,14 +118,19 @@ $(document).ready(function(){
 });
 
 
+function deleteOldData(){
+     var output = document.getElementById('confirmInfo'); 
+   output.innerHTML = "";
+}
+
 function displayData(JsonData){
     var itemInfo = "";
     for (var part in JsonData){
-        itemInfo = itemInfo + part + ":" + JsonData[part] + ", ";        
+        itemInfo = itemInfo + part + ": " + JsonData[part] + "<br>";        
         
     }
     
-    var output = document.getElementById('confirmation'); 
+    var output = document.getElementById('confirmInfo'); 
    output.innerHTML = itemInfo;
     
 }
