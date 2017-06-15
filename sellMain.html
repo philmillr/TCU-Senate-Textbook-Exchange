@@ -10,7 +10,7 @@
     
     </head>
     <body>
-        <img src = "http://www.bookicious.com/img/bk.jpg" id = backImage>
+        <img src = "https://static.pexels.com/photos/350756/pexels-photo-350756.jpeg" id = backImage>
         <div class = "full">
             <div class = "header">
                 <div class = "links">
@@ -25,31 +25,31 @@
             <div class = "main">
             <form id='sellForm'>
                 Class:<br>            
-                <input id='class' name='class' autocapitalize="characters"
-                       pattern="[A-Z]{2,4}[ ][0-9]{4}" title="department code followed by 4 digit class code (e.g. CHEM 0012)" 
+                <input class = ghost-input name='class' autocapitalize="characters"
+                       pattern="[A-Z]{2,4}[ ]{1}[0-9]{4}" title="department code (in all CAPS) followed by 4 digit class code (e.g. CHEM 0012)" 
                        placeholder="e.g. SPN 0022" requried><br>
 
                 Textbook Title:<br>
-                <input id='textbookTitle' name='textbookTitle' type="text" required><br>
+                <input class = ghost-input name='textbookTitle' type="text" placeholder="e.g. An Invitation to Spanish (Student Edition)" required><br>
 
                 Edition:<br>
-                <input id='edition' name='edition' type="text"><br>
+                <input class = ghost-input name='edition' type="text" placeholder=" e.g. 9 (optional)"><br>
 
                 Email:<br>
-                <input id='email' name='email' type="email" required><br>
+                <input class = ghost-input name='email' type="email" placeholder="e.g. example@mail.com"required><br>
 
                 Phone Number:<br>
-                <input id='phoneNumber' name='phoneNumber' type="tel"><br>
+                <input class = ghost-input name='phoneNumber' type="tel" placeholder="e.g. 123-456-7890 (optional)"><br>
 
                 Price:<br>
-                <input id='price' name='price' type="text" required><br>
+                <input class = ghost-input name='price' type="number" placeholder="e.g. 33" required><br>
 
                 YOUR Venmo (e.g. @John-Smith) -- will be paid automatically if sold [if prefer cash, write CASH]<br>
-                <input id='venmo' name='venmo' pattern="CASH|[@][A-z]{1,20}" 
+                <input class = ghost-input name='venmo' pattern="CASH|[@][A-z0-9]{1,20}" 
                        title="please write CASH or input your venmo with the @ character"
                        placeholder="e.g. @philmillr" required><br>
             
-                <button type='submit'><span>Submit</span></button>
+                <button class = "submitbutton" type='submit'><span>Submit</span></button>
               </form>
             </div>
         </div>
