@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src='buyMain.js'></script>
@@ -32,11 +32,24 @@
                     <input class = "ghost-input" name='id' type='text' placeholder = "e.g. 12492"required><br>
 
             
-                <button type='submitbutton'><span>Submit</span></button>
+                <button type='submit' id = submitButton value = "submit button"><span>Submit</span></button>
                 
-                 <p id = confirmation>NOTHING YET</p>
+                 
               </form>
             </div>
+        </div>
+        <div class = "confirmation">
+            <p id = "confirmInfo" class = "co"></p>
+            
+            <div id="sk-folding-cube" class = "load">
+              <div class="sk-cube1 sk-cube"></div>
+              <div class="sk-cube2 sk-cube"></div>
+              <div class="sk-cube4 sk-cube"></div>
+              <div class="sk-cube3 sk-cube"></div>
+            </div>
+            <p id = loading class = "load">Loading...</p>
+            <button class = "co" type = "button" value = "CONFIRM" id = "confirmButton"><a href = index.html>Confirm</a></button>
+            <button class = "co"type = "button" value = "CANCEL" id = "cancelButton">Cancel</button>
         </div>
     </body>
 </html>
