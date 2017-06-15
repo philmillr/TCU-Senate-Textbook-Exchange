@@ -75,7 +75,8 @@ function displayData(JsonData){
         
     }
     
-    window.confirm(itemInfo);
+    var output = document.getElementById('confirmation'); 
+   output.innerHTML = itemInfo;
     
 }
 
