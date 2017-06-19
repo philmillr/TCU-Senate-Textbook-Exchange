@@ -1,5 +1,25 @@
 console.log("start of sellMain.js");
 
+window.onload = function (){
+    console.log(sessionStorage.email);
+    
+    var emailID = document.getElementById("email");
+    var phoneNumberID = document.getElementById("phoneNumber");
+    var venmoID = document.getElementById("venmo");
+    
+    var email = sessionStorage.email;
+    var phoneNumber = sessionStorage.phoneNumber;
+    var venmo = sessionStorage.venmo;
+    
+    emailID.setAttribute("value", email);
+    phoneNumberID.setAttribute("value", phoneNumber);
+    venmoID.setAttribute("value", venmo);
+    
+    console.log("Loading " + phoneNumber);
+    console.log("Loading " + email);
+    console.log("Loading " + venmo);
+}
+
 $(document).ready(function(){
 console.log("start of function");
 
@@ -10,6 +30,8 @@ var request;
 // bind to the submit event in our form
 
 $("#sellForm").submit(function(event){
+    
+    saveCrap();
     
     //Abort any pending request
     if (request) {
@@ -68,3 +90,16 @@ $("#sellForm").submit(function(event){
     console.log("sendData")
 });
 });
+
+function saveCrap(){
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var venmo = document.getElementById("venmo").value;
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("phoneNumber", phoneNumber);
+    sessionStorage.setItem("venmo", venmo);
+    
+    console.log("saving " + email);
+    console.log("saving " + venmo);
+    console.log("saving " + phoneNumber);
+}
