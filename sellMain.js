@@ -92,14 +92,22 @@ $("#sellForm").submit(function(event){
 });
 
 function saveCrap(){
-    var email = document.getElementById("email").value;
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var venmo = document.getElementById("venmo").value;
-    sessionStorage.setItem("email", email);
-    sessionStorage.setItem("phoneNumber", phoneNumber);
-    sessionStorage.setItem("venmo", venmo);
+    var emailID = document.getElementById("email");
+    var phoneNumberID = document.getElementById("phoneNumber");
+    var venmoID = document.getElementById("venmo");
+     
+    sessionStorage.setItem("email", emailID.value);
+    sessionStorage.setItem("phoneNumber", phoneNumberID.value);
+    sessionStorage.setItem("venmo", venmoID.value);
     
-    console.log("saving " + email);
-    console.log("saving " + venmo);
-    console.log("saving " + phoneNumber);
+    console.log("saving " + sessionStorage.email);
+    console.log("saving " + sessionStorage.venmo);
+    console.log("saving " + sessionStorage.phoneNumber);   
+    
+    //calculates textbook ID
+    var textbookID = Date.now();
+    console.log(textbookID);
+    
+    //saves textbook ID to session storage to be displayed on next page
+    sessionStorage.setitem("textbookID", textbookID);
 }
